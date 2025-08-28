@@ -51,7 +51,7 @@ def publish_batch(
 
 
 def process_index(index: IndexReader, channel: MessageQueueChannel, downloader: Downloader, batch_size: int) -> None:
-    lines = list(index)   # load all lines so we know total count
+    lines = list(index)   
     found_urls = []
 
     for cdx_chunk in tqdm(lines, desc="Processing cluster.idx", unit="chunks"):
